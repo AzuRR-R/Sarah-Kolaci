@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#FFB6C1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Sarah - Kolači sa Ljubavlju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <ul class="nav-menu-left">
+                    <li><a href="#pocetna">POČETNA</a></li>
+                    <li><a href="#proizvodi">MENI</a></li>
+                </ul>
+                <div class="logo">
+                    <h1>Sarah</h1>
+                    <span class="tagline">Kolači sa Ljubavlju</span>
+                </div>
+                <ul class="nav-menu-right">
+                    <li><a href="#o-nama">O NAMA</a></li>
+                    <li><a href="#narudzbe" class="btn-nav">NARUČI SADA</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#pocetna">POČETNA</a></li>
+                    <li><a href="#proizvodi">MENI</a></li>
+                    <li><a href="#o-nama">O NAMA</a></li>
+                    <li><a href="#narudzbe" class="btn-nav-mobile">NARUČI SADA</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="pocetna">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 class="hero-title">SARAH KOLAČI</h2>
+                        <p class="hero-subtitle">Svježi kolači pravljeni sa ljubavlju</p>
+                        <div class="hero-buttons">
+                            <a href="#proizvodi" class="btn btn-primary">POGLEDAJ MENI</a>
+                            <a href="#kontakt" class="btn btn-outline">NARUČI SADA</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&h=800&fit=crop" alt="Sarah Kolači">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="proizvodi">
+        <div class="container-full">
+            <h2 class="section-title">NAŠ MENI</h2>
+            <p class="section-subtitle">Ručno pravljeni kolači od najkvalitetnijih sastojaka</p>
+            
+            <!-- Torte Category -->
+            <div class="product-category">
+                <h3 class="category-title">TORTE</h3>
+                <div class="products-scroll">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=500&fit=crop" alt="Čokoladna Torta">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>ČOKOLADNA TORTA</h4>
+                            <p>Bogata čokoladna torta sa kremastim filom</p>
+                            <span class="price">25 KM</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500&h=500&fit=crop" alt="Voćna Torta">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>VOĆNA TORTA</h4>
+                            <p>Osvježavajuća torta sa sezonskim voćem</p>
+                            <span class="price">30 KM</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=500&h=500&fit=crop" alt="Vanila Torta">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>VANILA TORTA</h4>
+                            <p>Klasična vanila torta sa bogatim ukusom</p>
+                            <span class="price">22 KM</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=500&h=500&fit=crop" alt="Krem Torta">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>KREM TORTA</h4>
+                            <p>Lagana torta sa kremastim slojevima</p>
+                            <span class="price">28 KM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolači Category -->
+            <div class="product-category">
+                <h3 class="category-title">KOLAČI</h3>
+                <div class="products-scroll">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&h=500&fit=crop" alt="Kolačići">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>ASORTIMAN KOLAČIĆA</h4>
+                            <p>Raznovrsni kolačići za svaku priliku</p>
+                            <span class="price">15 KM</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=500&h=500&fit=crop" alt="Medenjaci">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>MEDENJACI</h4>
+                            <p>Tradicionalni medenjaci sa začinima</p>
+                            <span class="price">12 KM</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=500&h=500&fit=crop" alt="Keks Kolači">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>KEKS KOLAČI</h4>
+                            <p>Hrskavi kolači sa čokoladom</p>
+                            <span class="price">10 KM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Muffini Category -->
+            <div class="product-category">
+                <h3 class="category-title">MUFFINI</h3>
+                <div class="products-scroll">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?w=500&h=500&fit=crop" alt="Čokoladni Muffini">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>ČOKOLADNI MUFFINI</h4>
+                            <p>Mekani muffini sa čokoladnim komadićima</p>
+                            <span class="price">3 KM</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=500&h=500&fit=crop" alt="Borovnica Muffini">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>BOROVNICA MUFFINI</h4>
+                            <p>Sočni muffini sa svježim borovnicama</p>
+                            <span class="price">3 KM</span>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=500&h=500&fit=crop" alt="Vanila Muffini">
+                            <div class="product-overlay">
+                                <button class="btn btn-secondary">Naruči</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h4>VANILA MUFFINI</h4>
+                            <p>Klasični vanila muffini</p>
+                            <span class="price">3 KM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="o-nama">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">O NAMA</h2>
+                    <p>Sarah je porodična kolačarnica koja već godinama donosi radost kroz ukusne, ručno pravljene kolače. Svaki kolač pravimo sa pažnjom i ljubavlju, koristeći samo najkvalitetnije sastojke.</p>
+                    <p>Naša misija je da svaki zalogaj bude poseban doživljaj. Od tradicionalnih recepata do modernih kreacija, trudimo se da zadovoljimo sve ukuse.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">🎂</div>
+                            <h4>Svježe Svaki Dan</h4>
+                            <p>Svi naši proizvodi se prave svježi svaki dan</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">❤️</div>
+                            <h4>Sa Ljubavlju</h4>
+                            <p>Svaki kolač pravimo sa pažnjom i ljubavlju</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">⭐</div>
+                            <h4>Kvalitetni Sastojci</h4>
+                            <p>Koristimo samo najbolje sastojke</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=800&fit=crop" alt="O nama">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section" id="narudzbe">
+        <div class="container">
+            <h2 class="section-title">NARUČI SADA</h2>
+            <p class="section-subtitle">Popunite jednostavan formular i kontaktiraćemo vas uskoro</p>
+            
+            <div class="order-form-wrapper">
+                <form id="orderForm" class="order-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Vaše Ime *</label>
+                            <input type="text" name="name" placeholder="Unesite vaše ime" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Telefon *</label>
+                            <input type="tel" name="phone" placeholder="+387 XX XXX XXX" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tip Proizvoda *</label>
+                        <select name="product-type" required>
+                            <option value="">Izaberite...</option>
+                            <option value="torta">Torta</option>
+                            <option value="kolaci">Kolači</option>
+                            <option value="muffini">Muffini</option>
+                            <option value="ostalo">Ostalo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Datum Preuzimanja</label>
+                        <input type="date" name="pickup-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dodatne Napomene</label>
+                        <textarea name="notes" rows="4" placeholder="Opišite vašu narudžbu (veličina, ukus, posebne želje...)"></textarea>
+                    </div>
+
+                    <div class="form-note">
+                        <p>* Javićemo vam se telefonskim pozivom ili porukom za potvrdu narudžbe</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Pošalji Narudžbu</button>
+                </form>
+
+                <div class="order-info">
+                    <div class="info-box">
+                        <div class="info-icon">📞</div>
+                        <h4>Pozovite Nas</h4>
+                        <p>+387 XX XXX XXX</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">⏰</div>
+                        <h4>Radno Vrijeme</h4>
+                        <p>Pon - Pet: 08:00 - 20:00</p>
+                        <p>Sub: 09:00 - 18:00</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">🎂</div>
+                        <h4>Minimalna Narudžba</h4>
+                        <p>24h unaprijed za torte</p>
+                        <p>Isti dan za kolače i muffine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontakt">
+        <div class="container">
+            <h2 class="section-title">KONTAKTIRAJTE NAS</h2>
+            <p class="section-subtitle">Naručite svoje omiljene kolače ili nas kontaktirajte za posebne prilike</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+387 XX XXX XXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@sarah-kolaci.ba</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Adresa</h4>
+                            <p>Vaša Adresa, Grad</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <h4>Radno Vrijeme</h4>
+                            <p>Pon - Pet: 08:00 - 20:00</p>
+                            <p>Sub: 09:00 - 18:00</p>
+                            <p>Ned: 10:00 - 16:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Vaše Ime" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Adresa" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Telefon">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Vaša Poruka" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pošalji Poruku</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sarah</h3>
+                    <p>Kolači sa ljubavlju, svaki dan svježi</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Brzi Linkovi</h4>
+                    <ul>
+                        <li><a href="#pocetna">Početna</a></li>
+                        <li><a href="#proizvodi">Proizvodi</a></li>
+                        <li><a href="#o-nama">O Nama</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Pratite Nas</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sarah Kolači. Sva prava zadržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
