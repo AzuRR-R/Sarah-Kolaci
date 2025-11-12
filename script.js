@@ -1,3 +1,6 @@
+// Google Sheets API URL
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbz8dP0SSr0a4PU74oanspXYWBAowgUtmXTqeRAIJ6LzTASaDU77PU95R2BpsJR71qXZZw/exec';
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navMenu = document.getElementById('navMenu');
@@ -62,10 +65,7 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form values
-        const formData = new FormData(contactForm);
-        
-        // Show success message (you can replace this with actual form submission logic)
+        // Show success message
         alert('Hvala vam na poruci! Kontaktiraćemo vas uskoro.');
         
         // Reset form
@@ -73,24 +73,54 @@ if (contactForm) {
     });
 }
 
-// Order Form submission
+// Order Form submission with Google Sheets integration
 const orderForm = document.getElementById('orderForm');
 
 if (orderForm) {
-    orderForm.addEventListener('submit', (e) => {
+    orderForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         // Get form values
-        const formData = new FormData(orderForm);
-        const name = formData.get('name');
-        const phone = formData.get('phone');
-        const productType = formData.get('product-type');
+        const formData = {
+            name: orderForm.querySelector('[name="name"]').value,
+            phone: orderForm.querySelector('[name="phone"]').value,
+            email: orderForm.querySelector('[name="email"]')?.value || '',
+            productType: orderForm.querySelector('[name="product-type"]').value,
+            pickupDate: orderForm.querySelector('[name="pickup-date"]').value,
+            notes: orderForm.querySelector('[name="notes"]').value,
+            price: ''
+        };
         
-        // Show success message with order details
-        alert(`Hvala ${name}!\n\nVaša narudžba za ${productType} je primljena.\nKontaktiraćemo vas na broj: ${phone}\n\nOčekujte naš poziv uskoro!`);
+        // Show loading state
+        const submitBtn = orderForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Šaljem...';
+        submitBtn.disabled = true;
         
-        // Reset form
-        orderForm.reset();
+        try {
+            // Send to Google Sheets
+            await fetch(GOOGLE_SHEETS_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            // Show success message
+            alert(`✅ Hvala ${formData.name}!\n\nVaša narudžba za ${formData.productType} je primljena.\nKontaktiraćemo vas na broj: ${formData.phone}\n\nOčekujte naš poziv uskoro!`);
+            
+            // Reset form
+            orderForm.reset();
+        } catch (error) {
+            console.error('Greška:', error);
+            alert('❌ Došlo je do greške. Molimo pokušajte ponovo ili nas kontaktirajte telefonom.');
+        } finally {
+            // Restore button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
     });
 }
 
@@ -129,8 +159,8 @@ document.querySelectorAll('.feature').forEach((feature, index) => {
 document.querySelectorAll('.product-overlay .btn').forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
-        const productName = button.closest('.product-card').querySelector('h3').textContent;
-        alert(`Želite naručiti: ${productName}\n\nKontaktirajte nas putem telefona ili email-a za narudžbu.`);
+        const productName = button.closest('.product-card').querySelector('h4').textContent;
+        alert(`Želite naručiti: ${productName}\n\nIdite na sekciju NARUČI SADA ili nas kontaktirajte telefonom.`);
     });
 });
 
@@ -176,12 +206,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Wait a bit before starting the hint animation
             setTimeout(() => {
                 // Gentle auto-scroll to show it's scrollable
-                const scrollAmount = 100; // Reduced from 150 to 100 for gentler effect
+                const scrollAmount = 100;
                 let scrolled = 0;
                 
                 const scrollInterval = setInterval(() => {
                     if (scrolled < scrollAmount) {
-                        scroll.scrollLeft += 2; // Reduced from 5 to 2 for slower, gentler scroll
+                        scroll.scrollLeft += 2;
                         scrolled += 2;
                     } else {
                         clearInterval(scrollInterval);
@@ -193,10 +223,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             });
                             // Mark as seen so it doesn't repeat
                             sessionStorage.setItem(`scrollHint_${index}`, 'true');
-                        }, 800); // Increased from 500 to 800 for more pause time
+                        }, 800);
                     }
-                }, 30); // Increased from 20 to 30 for slower animation
-            }, 2000 + (index * 1500)); // Increased delays for gentler experience
+                }, 30);
+            }, 2000 + (index * 1500));
         }
         
         // Mark as seen when user manually scrolls

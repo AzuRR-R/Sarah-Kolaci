@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Panel - Sarah Kolači</title>
+    <link rel="stylesheet" href="admin-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-container">
+        <div class="login-box">
+            <div class="logo-admin">
+                <h1>Sarah Kolači</h1>
+                <p>Admin Panel</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Korisničko Ime</label>
+                    <input type="text" id="username" placeholder="Unesite korisničko ime" required>
+                </div>
+                <div class="form-group">
+                    <label>Lozinka</label>
+                    <input type="password" id="password" placeholder="Unesite lozinku" required>
+                </div>
+                <button type="submit" class="btn-login">Prijavi Se</button>
+                <div id="loginError" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="dashboard-container" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-content">
+                <div class="logo">
+                    <h2>Sarah Kolači - Admin</h2>
+                </div>
+                <div class="header-actions">
+                    <span class="user-info">👤 <span id="currentUser"></span></span>
+                    <button id="logoutBtn" class="btn-logout">Odjavi Se</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="admin-nav">
+            <button class="nav-tab active" data-tab="calendar">📅 Kalendar</button>
+            <button class="nav-tab" data-tab="orders">📋 Narudžbe</button>
+            <button class="nav-tab" data-tab="stats">📊 Statistika</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <!-- Calendar Tab -->
+            <div id="calendarTab" class="tab-content active">
+                <div class="content-header">
+                    <h3>Kalendar Narudžbi</h3>
+                    <button id="refreshCalendar" class="btn-refresh">🔄 Osvježi</button>
+                </div>
+                <div class="calendar-controls">
+                    <button id="prevMonth" class="btn-nav">◀ Prethodni</button>
+                    <h4 id="currentMonth"></h4>
+                    <button id="nextMonth" class="btn-nav">Sljedeći ▶</button>
+                </div>
+                <div id="calendar" class="calendar-grid"></div>
+                <div id="dayOrders" class="day-orders"></div>
+            </div>
+
+            <!-- Orders Tab -->
+            <div id="ordersTab" class="tab-content">
+                <div class="content-header">
+                    <h3>Sve Narudžbe</h3>
+                    <div class="filter-controls">
+                        <select id="statusFilter" class="filter-select">
+                            <option value="all">Sve Narudžbe</option>
+                            <option value="Nova">Nova</option>
+                            <option value="U Pripremi">U Pripremi</option>
+                            <option value="Gotova">Gotova</option>
+                            <option value="Preuzeta">Preuzeta</option>
+                            <option value="Otkazana">Otkazana</option>
+                        </select>
+                        <button id="refreshOrders" class="btn-refresh">🔄 Osvježi</button>
+                    </div>
+                </div>
+                <div class="orders-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalOrders">0</div>
+                        <div class="stat-label">Ukupno Narudžbi</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="newOrders">0</div>
+                        <div class="stat-label">Nove</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="inProgressOrders">0</div>
+                        <div class="stat-label">U Pripremi</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="readyOrders">0</div>
+                        <div class="stat-label">Gotove</div>
+                    </div>
+                </div>
+                <div id="ordersList" class="orders-list"></div>
+            </div>
+
+            <!-- Stats Tab -->
+            <div id="statsTab" class="tab-content">
+                <div class="content-header">
+                    <h3>Statistika</h3>
+                    <select id="statsFilter" class="filter-select">
+                        <option value="week">Ova Sedmica</option>
+                        <option value="month">Ovaj Mjesec</option>
+                        <option value="year">Ova Godina</option>
+                    </select>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <h4>Najpopularniji Proizvodi</h4>
+                        <div id="popularProducts" class="stat-list"></div>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Ukupna Zarada</h4>
+                        <div id="totalRevenue" class="revenue-display">0 KM</div>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Prosječna Narudžba</h4>
+                        <div id="avgOrder" class="revenue-display">0 KM</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Order Detail Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Detalji Narudžbe</h3>
+            <div id="orderDetails"></div>
+            <div class="modal-actions">
+                <select id="orderStatus" class="status-select">
+                    <option value="Nova">Nova</option>
+                    <option value="U Pripremi">U Pripremi</option>
+                    <option value="Gotova">Gotova</option>
+                    <option value="Preuzeta">Preuzeta</option>
+                    <option value="Otkazana">Otkazana</option>
+                </select>
+                <button id="updateStatus" class="btn-primary">Ažuriraj Status</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
