@@ -127,8 +127,6 @@
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#pocetna">POČETNA</a></li>
                     <li><a href="#proizvodi">MENI</a></li>
-                    <li><a href="#dorucak">DORUČAK</a></li>
-                    <li><a href="#rodjendanske">ROĐENDANSKE</a></li>
                     <li><a href="#o-nama">O NAMA</a></li>
                     <li><a href="#narudzbe" class="btn-nav-mobile">NARUČI SADA</a></li>
                 </ul>
@@ -326,233 +324,289 @@
             <div class="special-features">
                 <a href="#dorucak" class="feature-card">
                     <div class="feature-card-icon">🥐</div>
-                    <h3>DORUČAK PAKETI</h3>
-                    <p>Svježi doručak combo paketi</p>
+                    <h3>DORUČAK</h3>
+                    <p>Svježi kroasani, kifle i sendviči</p>
                     <span class="feature-arrow">→</span>
                 </a>
                 
-                <a href="#rodjendanske" class="feature-card">
-                    <div class="feature-card-icon">🎂</div>
-                    <h3>ROĐENDANSKE TORTE</h3>
-                    <p>Predloženi dizajnovi za rođendane</p>
+                <a href="#dizajner" class="feature-card">
+                    <div class="feature-card-icon">🎨</div>
+                    <h3>DIZAJNIRAJ SVOJU TORTU</h3>
+                    <p>Kreiraj tortu po svojoj želji</p>
                     <span class="feature-arrow">→</span>
                 </a>
             </div>
         </div>
+    <section class="about" id="o-nama">
+=======
     </section>
 
-    <!-- Breakfast Combos Section -->
+    <!-- Breakfast Section -->
     <section class="breakfast-section" id="dorucak">
         <div class="container">
-            <h2 class="section-title">DORUČAK PAKETI</h2>
+            <h2 class="section-title">DORUČAK</h2>
             <p class="section-subtitle">Svježi doručak svaki dan od 07:00 - 11:00</p>
             
-            <div class="breakfast-combos">
-                <!-- Combo 1 -->
-                <div class="combo-card">
-                    <div class="combo-image">
-                        <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=600&h=400&fit=crop" alt="Klasik Doručak">
-                    </div>
-                    <div class="combo-info">
-                        <h3>KLASIK DORUČAK</h3>
-                        <ul class="combo-items">
-                            <li>🥐 Kroasan (čokolada ili vanila)</li>
-                            <li>☕ Kafa (espresso ili cappuccino)</li>
-                            <li>🥤 Sok (narandža ili jabuka)</li>
-                        </ul>
-                        <div class="combo-price">
-                            <span class="price-label">Cijena:</span>
-                            <span class="price">8 KM</span>
-                        </div>
-                        <button class="btn btn-secondary">Naruči</button>
-                    </div>
+            <div class="breakfast-grid">
+                <!-- Kroasani -->
+                <div class="breakfast-card">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&h=400&fit=crop" alt="Kroasani">
+                    <h3>KROASANI</h3>
+                    <p>Svježi, hrskavi kroasani</p>
+                    <ul class="breakfast-options">
+                        <li>Čokolada - 4 KM</li>
+                        <li>Vanila - 3.5 KM</li>
+                        <li>Badem - 4 KM</li>
+                    </ul>
                 </div>
 
-                <!-- Combo 2 -->
-                <div class="combo-card">
-                    <div class="combo-image">
-                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&h=400&fit=crop" alt="Zdravi Start">
-                    </div>
-                    <div class="combo-info">
-                        <h3>ZDRAVI START</h3>
-                        <ul class="combo-items">
-                            <li>🥗 Veggie sendvič</li>
-                            <li>🍓 Smoothie (jagoda ili borovnica)</li>
-                            <li>🍯 Kifla sa medom</li>
-                        </ul>
-                        <div class="combo-price">
-                            <span class="price-label">Cijena:</span>
-                            <span class="price">12 KM</span>
-                        </div>
-                        <button class="btn btn-secondary">Naruči</button>
-                    </div>
+                <!-- Kifle -->
+                <div class="breakfast-card">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&h=400&fit=crop" alt="Kifle">
+                    <h3>KIFLE</h3>
+                    <p>Mekane, svježe kifle</p>
+                    <ul class="breakfast-options">
+                        <li>Obične - 2 KM</li>
+                        <li>Sa sirom - 3 KM</li>
+                        <li>Sa džemom - 2.5 KM</li>
+                    </ul>
                 </div>
 
-                <!-- Combo 3 -->
-                <div class="combo-card">
-                    <div class="combo-image">
-                        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=600&h=400&fit=crop" alt="Puni Doručak">
-                    </div>
-                    <div class="combo-info">
-                        <h3>PUNI DORUČAK</h3>
-                        <ul class="combo-items">
-                            <li>🥪 Sendvič (šunka & sir)</li>
-                            <li>🥐 Kroasan</li>
-                            <li>☕ Cappuccino</li>
-                            <li>🥤 Svježi sok</li>
-                        </ul>
-                        <div class="combo-price">
-                            <span class="price-label">Cijena:</span>
-                            <span class="price">15 KM</span>
-                        </div>
-                        <button class="btn btn-secondary">Naruči</button>
-                    </div>
+                <!-- Sendviči -->
+                <div class="breakfast-card">
+                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&h=400&fit=crop" alt="Sendviči">
+                    <h3>SENDVIČI</h3>
+                    <p>Ukusni sendviči za doručak</p>
+                    <ul class="breakfast-options">
+                        <li>Šunka & Sir - 6 KM</li>
+                        <li>Piletina - 7 KM</li>
+                        <li>Veggie - 5 KM</li>
+                    </ul>
                 </div>
 
-                <!-- Combo 4 -->
-                <div class="combo-card">
-                    <div class="combo-image">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop" alt="Kafe Pauza">
-                    </div>
-                    <div class="combo-info">
-                        <h3>KAFE PAUZA</h3>
-                        <ul class="combo-items">
-                            <li>☕ Latte ili Cappuccino</li>
-                            <li>🍰 Kolač po izboru</li>
-                            <li>🧁 Mini muffin</li>
-                        </ul>
-                        <div class="combo-price">
-                            <span class="price-label">Cijena:</span>
-                            <span class="price">10 KM</span>
-                        </div>
-                        <button class="btn btn-secondary">Naruči</button>
-                    </div>
+                <!-- Smoothie -->
+                <div class="breakfast-card">
+                    <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=500&h=400&fit=crop" alt="Smoothie">
+                    <h3>SMOOTHIE</h3>
+                    <p>Osvježavajući voćni smoothie</p>
+                    <ul class="breakfast-options">
+                        <li>Jagoda - 5 KM</li>
+                        <li>Borovnica - 5 KM</li>
+                        <li>Mango - 5 KM</li>
+                    </ul>
+                </div>
+
+                <!-- Kafa -->
+                <div class="breakfast-card">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&h=400&fit=crop" alt="Kafa">
+                    <h3>KAFA</h3>
+                    <p>Svježe skuvana kafa</p>
+                    <ul class="breakfast-options">
+                        <li>Espresso - 2 KM</li>
+                        <li>Cappuccino - 3 KM</li>
+                        <li>Latte - 3.5 KM</li>
+                    </ul>
+                </div>
+
+                <!-- Čaj -->
+                <div class="breakfast-card">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&h=400&fit=crop" alt="Čaj">
+                    <h3>ČAJ</h3>
+                    <p>Raznovrsni čajevi</p>
+                    <ul class="breakfast-options">
+                        <li>Zeleni čaj - 2 KM</li>
+                        <li>Crni čaj - 2 KM</li>
+                        <li>Voćni čaj - 2.5 KM</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="breakfast-note">
-                <p>💡 <strong>Napomena:</strong> Svi doručak paketi dostupni su od 07:00 do 11:00. Možete naručiti dan unaprijed!</p>
+            <div class="breakfast-cta">
+                <a href="#narudzbe" class="btn btn-primary btn-large">Naruči Doručak</a>
             </div>
         </div>
     </section>
 
-    <!-- Birthday Cakes Section -->
-    <section class="birthday-cakes-section" id="rodjendanske">
-        <div class="container">
-            <h2 class="section-title">ROĐENDANSKE TORTE</h2>
-            <p class="section-subtitle">Predloženi dizajnovi za nezaboravne rođendane</p>
+    <!-- Cake Designer Section -->
+    <section class="cake-designer-section" id="dizajner">
+        <div class="container-full">
+            <h2 class="section-title">DIZAJNIRAJ SVOJU TORTU</h2>
+            <p class="section-subtitle">Kreiraj jedinstvenu tortu po svojoj želji</p>
             
-            <div class="birthday-cakes-grid">
-                <!-- Design 1 -->
-                <div class="birthday-cake-card">
-                    <div class="cake-image">
-                        <img src="IMG_3690.JPG" alt="Klasična Rođendanska">
-                        <span class="cake-badge">Najpopularnija</span>
+            <div class="designer-wrapper">
+                <!-- Preview Canvas -->
+                <div class="designer-preview">
+                    <canvas id="cakeCanvas" width="400" height="400"></canvas>
+                    <div class="preview-controls">
+                        <button id="rotateLeft" class="preview-btn">↶</button>
+                        <button id="rotateRight" class="preview-btn">↷</button>
+                        <button id="saveCake" class="preview-btn">💾 Sačuvaj</button>
                     </div>
-                    <div class="cake-details">
-                        <h3>KLASIČNA ROĐENDANSKA</h3>
-                        <p class="cake-description">Ružičasta torta sa bijelim dekoracijama i crvenim detaljima</p>
-                        <ul class="cake-specs">
-                            <li><strong>Ukus:</strong> Čokolada ili Vanila</li>
-                            <li><strong>Veličina:</strong> Mala (1kg) / Velika (2kg)</li>
-                            <li><strong>Dekoracije:</strong> Cvijeće, natpis, svijeće</li>
-                        </ul>
-                        <div class="cake-pricing">
-                            <div class="price-option">
+                </div>
+
+                <!-- Designer Controls -->
+                <div class="designer-controls">
+                    <div class="control-section">
+                        <h3>1. Veličina Torte</h3>
+                        <div class="control-options">
+                            <label class="option-card">
+                                <input type="radio" name="size" value="small" data-price="40">
                                 <span>Mala (1kg)</span>
-                                <span class="price">55 KM</span>
-                            </div>
-                            <div class="price-option">
-                                <span>Velika (2kg)</span>
-                                <span class="price">75 KM</span>
-                            </div>
+                                <span class="option-price">40 KM</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="size" value="medium" data-price="60" checked>
+                                <span>Srednja (2kg)</span>
+                                <span class="option-price">60 KM</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="size" value="large" data-price="80">
+                                <span>Velika (3kg)</span>
+                                <span class="option-price">80 KM</span>
+                            </label>
                         </div>
-                        <button class="btn btn-primary">Naruči Ovu Tortu</button>
                     </div>
-                </div>
 
-                <!-- Design 2 -->
-                <div class="birthday-cake-card">
-                    <div class="cake-image">
-                        <img src="IMG_2567.JPG" alt="Čokoladna Elegancija">
-                    </div>
-                    <div class="cake-details">
-                        <h3>ČOKOLADNA ELEGANCIJA</h3>
-                        <p class="cake-description">Bogata čokoladna torta sa crvenim akcentima</p>
-                        <ul class="cake-specs">
-                            <li><strong>Ukus:</strong> Čokolada</li>
-                            <li><strong>Veličina:</strong> Srednja (1.5kg)</li>
-                            <li><strong>Dekoracije:</strong> Čokoladne rozete, voće</li>
-                        </ul>
-                        <div class="cake-pricing">
-                            <div class="price-option single">
-                                <span>Srednja (1.5kg)</span>
-                                <span class="price">65 KM</span>
-                            </div>
+                    <div class="control-section">
+                        <h3>2. Oblik Torte</h3>
+                        <div class="control-options">
+                            <label class="option-card">
+                                <input type="radio" name="shape" value="round" checked>
+                                <span>⭕ Okrugla</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="shape" value="square">
+                                <span>⬜ Kvadratna</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="shape" value="heart" data-price="10">
+                                <span>❤️ Srce (+10 KM)</span>
+                            </label>
                         </div>
-                        <button class="btn btn-primary">Naruči Ovu Tortu</button>
                     </div>
-                </div>
 
-                <!-- Design 3 -->
-                <div class="birthday-cake-card">
-                    <div class="cake-image">
-                        <img src="IMG_2568.JPG" alt="Voćna Svježina">
-                    </div>
-                    <div class="cake-details">
-                        <h3>VOĆNA SVJEŽINA</h3>
-                        <p class="cake-description">Lagana torta sa svježim voćem i kremom</p>
-                        <ul class="cake-specs">
-                            <li><strong>Ukus:</strong> Vanila sa voćem</li>
-                            <li><strong>Veličina:</strong> Srednja (1.5kg)</li>
-                            <li><strong>Dekoracije:</strong> Sezonsko voće, šlag</li>
-                        </ul>
-                        <div class="cake-pricing">
-                            <div class="price-option single">
-                                <span>Srednja (1.5kg)</span>
-                                <span class="price">60 KM</span>
-                            </div>
+                    <div class="control-section">
+                        <h3>3. Ukus</h3>
+                        <div class="control-options">
+                            <label class="option-card">
+                                <input type="radio" name="flavor" value="chocolate" checked>
+                                <span>🍫 Čokolada</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="flavor" value="vanilla">
+                                <span>🍦 Vanila</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="flavor" value="fruit" data-price="5">
+                                <span>🍓 Voće (+5 KM)</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="flavor" value="honey" data-price="10">
+                                <span>🍯 Medena (+10 KM)</span>
+                            </label>
                         </div>
-                        <button class="btn btn-primary">Naruči Ovu Tortu</button>
                     </div>
-                </div>
 
-                <!-- Design 4 -->
-                <div class="birthday-cake-card">
-                    <div class="cake-image">
-                        <img src="IMG_2571.JPG" alt="Medena Tradicija">
-                        <span class="cake-badge">Specijalna</span>
-                    </div>
-                    <div class="cake-details">
-                        <h3>MEDENA TRADICIJA</h3>
-                        <p class="cake-description">Tradicionalna medena torta sa bogatim ukusom</p>
-                        <ul class="cake-specs">
-                            <li><strong>Ukus:</strong> Medena</li>
-                            <li><strong>Veličina:</strong> Velika (2kg)</li>
-                            <li><strong>Dekoracije:</strong> Orasi, med, dekorativni elementi</li>
-                        </ul>
-                        <div class="cake-pricing">
-                            <div class="price-option single">
-                                <span>Velika (2kg)</span>
-                                <span class="price">80 KM</span>
-                            </div>
+                    <div class="control-section">
+                        <h3>4. Boja Glazure</h3>
+                        <div class="color-picker">
+                            <label class="color-option" style="background: #FFB6C1;">
+                                <input type="radio" name="color" value="#FFB6C1" checked>
+                            </label>
+                            <label class="color-option" style="background: #FF69B4;">
+                                <input type="radio" name="color" value="#FF69B4">
+                            </label>
+                            <label class="color-option" style="background: #8B4513;">
+                                <input type="radio" name="color" value="#8B4513">
+                            </label>
+                            <label class="color-option" style="background: #FFFFFF; border: 2px solid #ddd;">
+                                <input type="radio" name="color" value="#FFFFFF">
+                            </label>
+                            <label class="color-option" style="background: #FFE4B5;">
+                                <input type="radio" name="color" value="#FFE4B5">
+                            </label>
+                            <label class="color-option" style="background: #87CEEB;">
+                                <input type="radio" name="color" value="#87CEEB">
+                            </label>
                         </div>
-                        <button class="btn btn-primary">Naruči Ovu Tortu</button>
                     </div>
+
+                    <div class="control-section">
+                        <h3>5. Dekoracije</h3>
+                        <div class="control-options">
+                            <label class="option-card">
+                                <input type="checkbox" name="decoration" value="flowers" data-price="15">
+                                <span>🌸 Cvijeće (+15 KM)</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="checkbox" name="decoration" value="text" data-price="10">
+                                <span>✍️ Natpis (+10 KM)</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="checkbox" name="decoration" value="number" data-price="10">
+                                <span>🔢 Broj (+10 KM)</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="checkbox" name="decoration" value="candles" data-price="5">
+                                <span>🕯️ Svijeće (+5 KM)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-section">
+                        <label for="cakeText">Tekst na Torti (opcionalno):</label>
+                        <input type="text" id="cakeText" placeholder="npr. Sretan Rođendan!" maxlength="30">
+                    </div>
+
+                    <div class="price-display">
+                        <h3>Ukupna Cijena:</h3>
+                        <div class="total-price" id="totalPrice">60 KM</div>
+                    </div>
+
+                    <button id="orderCustomCake" class="btn btn-primary btn-large">Naruči Ovu Tortu</button>
                 </div>
             </div>
 
-            <div class="custom-cake-cta">
-                <div class="cta-content">
-                    <h3>Želite nešto drugačije?</h3>
-                    <p>Kontaktirajte nas i kreirajmo zajedno vašu savršenu rođendansku tortu!</p>
-                    <a href="#narudzbe" class="btn btn-outline btn-large">Kontaktirajte Nas</a>
+            <!-- Predloženi Dizajnovi -->
+            <div class="preset-designs">
+                <h3 class="section-title">Predloženi Dizajnovi</h3>
+                <div class="presets-grid">
+                    <div class="preset-card" data-preset="birthday">
+                        <img src="IMG_3690.JPG" alt="Rođendanska Torta">
+                        <h4>Rođendanska Torta</h4>
+                        <p>Srednja, okrugla, čokolada</p>
+                        <span class="preset-price">75 KM</span>
+                        <button class="btn btn-secondary load-preset">Učitaj Dizajn</button>
+                    </div>
+                    <div class="preset-card" data-preset="wedding">
+                        <img src="IMG_2568.JPG" alt="Svadbena Torta">
+                        <h4>Svadbena Torta</h4>
+                        <p>Velika, srce, vanila</p>
+                        <span class="preset-price">95 KM</span>
+                        <button class="btn btn-secondary load-preset">Učitaj Dizajn</button>
+                    </div>
+                    <div class="preset-card" data-preset="chocolate">
+                        <img src="IMG_2567.JPG" alt="Čokoladna Torta">
+                        <h4>Čokoladna Torta</h4>
+                        <p>Srednja, okrugla, čokolada</p>
+                        <span class="preset-price">65 KM</span>
+                        <button class="btn btn-secondary load-preset">Učitaj Dizajn</button>
+                    </div>
+                    <div class="preset-card" data-preset="honey">
+                        <img src="IMG_2571.JPG" alt="Medena Torta">
+                        <h4>Medena Torta</h4>
+                        <p>Srednja, kvadratna, medena</p>
+                        <span class="preset-price">70 KM</span>
+                        <button class="btn btn-secondary load-preset">Učitaj Dizajn</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
+    <section class="about" id="o-nama">
+=======
     <section class="about" id="o-nama">
         <div class="container">
             <div class="about-content">
@@ -729,8 +783,6 @@
                     <ul>
                         <li><a href="#pocetna">Početna</a></li>
                         <li><a href="#proizvodi">Proizvodi</a></li>
-                        <li><a href="#dorucak">Doručak</a></li>
-                        <li><a href="#rodjendanske">Rođendanske Torte</a></li>
                         <li><a href="#o-nama">O Nama</a></li>
                         <li><a href="#kontakt">Kontakt</a></li>
                     </ul>

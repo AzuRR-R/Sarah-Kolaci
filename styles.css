@@ -916,3 +916,395 @@ section {
         transform: translateY(0);
     }
 }
+
+/* Special Features Cards */
+.special-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.feature-card:hover::before {
+    opacity: 0.05;
+}
+
+.feature-card-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+    font-family: 'Fredoka', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-arrow {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+/* Breakfast Section */
+.breakfast-section {
+    background: var(--white);
+}
+
+.breakfast-combos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.combo-card {
+    background: var(--light-color);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.combo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.combo-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.combo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.combo-card:hover .combo-image img {
+    transform: scale(1.1);
+}
+
+.combo-info {
+    padding: 2rem;
+}
+
+.combo-info h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    font-family: 'Fredoka', sans-serif;
+}
+
+.combo-items {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.combo-items li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.combo-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 20px;
+}
+
+.price-label {
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.combo-price .price {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+}
+
+.breakfast-note {
+    background: rgba(255, 182, 193, 0.1);
+    padding: 2rem;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.breakfast-note p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Birthday Cakes Section */
+.birthday-cakes-section {
+    background: var(--light-color);
+}
+
+.birthday-cakes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.birthday-cake-card {
+    background: var(--white);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.birthday-cake-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.cake-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cake-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.birthday-cake-card:hover .cake-image img {
+    transform: scale(1.05);
+}
+
+.cake-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow);
+}
+
+.cake-details {
+    padding: 2rem;
+}
+
+.cake-details h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    font-family: 'Fredoka', sans-serif;
+}
+
+.cake-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.cake-specs {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    background: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+.cake-specs li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.cake-specs strong {
+    color: var(--dark-color);
+    font-weight: 800;
+}
+
+.cake-pricing {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.price-option {
+    flex: 1;
+    background: var(--light-color);
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.price-option:hover {
+    border-color: var(--secondary-color);
+    background: var(--white);
+}
+
+.price-option.single {
+    flex: none;
+    width: 100%;
+}
+
+.price-option span:first-child {
+    display: block;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.price-option .price {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+}
+
+.custom-cake-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 4rem 2rem;
+    border-radius: 40px;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-content h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.custom-cake-cta .btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+    background: transparent;
+}
+
+.custom-cake-cta .btn-outline:hover {
+    background: var(--white);
+    color: var(--secondary-color);
+}
+
+/* Responsive Styles for New Sections */
+@media (max-width: 768px) {
+    .special-features {
+        grid-template-columns: 1fr;
+    }
+
+    .breakfast-combos {
+        grid-template-columns: 1fr;
+    }
+
+    .birthday-cakes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cake-pricing {
+        flex-direction: column;
+    }
+
+    .price-option {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .combo-info {
+        padding: 1.5rem;
+    }
+
+    .cake-details {
+        padding: 1.5rem;
+    }
+
+    .custom-cake-cta {
+        padding: 3rem 1.5rem;
+    }
+
+    .cta-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
